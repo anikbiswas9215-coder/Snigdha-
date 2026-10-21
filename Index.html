@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Snigdha 💗</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 22px 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffe0ec, #fff7fb, #f4ddff);
+      color: #71314f;
+      overflow-x: hidden;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 440px;
+      padding: 26px 20px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid white;
+      border-radius: 25px;
+      box-shadow: 0 12px 40px rgba(180, 60, 115, 0.17);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .photo {
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      outline: 3px solid #f3a2c4;
+      box-shadow: 0 6px 18px #d6337830;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      color: #d63378;
+      font-size: 28px;
+      margin: 12px 0;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .small {
+      color: #a36a86;
+      font-size: 14px;
+    }
+
+    button {
+      border: none;
+      border-radius: 25px;
+      padding: 13px 21px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .primary {
+      background: linear-gradient(135deg, #ff78ad, #d63378);
+      color: white;
+      box-shadow: 0 5px 15px #d6337830;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .message {
+      text-align: left;
+      white-space: pre-line;
+      line-height: 1.9;
+      margin: 20px 0;
+    }
+
+    .button-area {
+      position: relative;
+      width: 100%;
+      height: 150px;
+      margin-top: 20px;
+      border-radius: 16px;
+      background: #fff8fb;
+      border: 1px dashed #f4c0d5;
+      overflow: hidden;
+    }
+
+    #yesBtn,
+    #noBtn {
+      position: absolute;
+      top: 48px;
+      min-width: 105px;
+    }
+
+    #yesBtn {
+      left: calc(50% - 115px);
+      background: #e84393;
+      color: white;
+    }
+
+    #noBtn {
+      left: calc(50% + 10px);
+      background: #eee5eb;
+      color: #744e65;
+      transition: left 0.18s ease, top 0.18s ease;
+    }
+
+    .hint {
+      font-size: 13px;
+      color: #a36a86;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 105px;
+      resize: vertical;
+      padding: 12px;
+      margin: 12px 0;
+      border: 1px solid #e7a7c5;
+      border-radius: 12px;
+      background: #fffafd;
+      color: #71314f;
+      font: inherit;
+      font-size: 15px;
+      outline-color: #d63378;
+    }
+
+    .result-emoji {
+      font-size: 48px;
+    }
+
+    .floating-heart {
+      position: fixed;
+      bottom: -35px;
+      z-index: 0;
+      pointer-events: none;
+      animation: rise 7s linear forwards;
+    }
+
+    @keyframes rise {
+      from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+      }
+      to {
+        transform: translateY(-115vh) rotate(35deg);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .card {
+        padding: 22px 14px;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+
+      #yesBtn {
+        left: calc(50% - 112px);
+      }
+
+      #noBtn {
+        left: calc(50% + 5px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="card">
+
+    <!-- HOME SCREEN -->
+    <section id="homeScreen">
+      
+
+      <div style="font-size:30px">🌸 💗 🌸</div>
+      <h1>Hey, Snigdha! 💌</h1>
+
+      <p>
+        তোর জন্য মনের মধ্যে জমে থাকা কিছু কথা আছে...
+      </p>
+
+      <p class="small">
+        একটু সময় নিয়ে পড়িস। 🌷
+      </p>
+
+      <button class="primary" id="openBtn">
+        Open My Message 💌
+      </button>
+    </section>
+
+    <!-- PROPOSAL SCREEN -->
+    <section id="proposalScreen" class="hidden">
+      <div style="font-size:36px">💗</div>
+      <h1>শুধু তোর জন্য, Snigdha</h1>
+
+      <div class="message">
+Snigdha,
+
+তোকে একটা কথা অনেক দিন ধরে বলতে চাইছিলাম। ❤️
+
+জানি না তুই আমাকে কীভাবে দেখিস, কিন্তু একটা কথা সত্যি—তুই আমার জীবনে প্রথম মানুষ, যাকে আমার সত্যিই ভালো লেগেছে। তোর সঙ্গে কথা বলা, তোকে দেখা, আর তোর কথা ভাবা—আমার কাছে এগুলো খুব স্পেশাল।
+
+আমি তোকে শুধু কিছু দিনের জন্য পছন্দ করি না। আমি চাই, যদি কখনও তুই আমাকে নিজের জীবনে জায়গা দিস, তাহলে আমি সারাজীবন তোর প্রতি loyal থাকতে পারি। তোর বিশ্বাস, তোর অনুভূতি আর তোর সম্মান আমার কাছে খুব গুরুত্বপূর্ণ হবে।
+
+আমি জানি, অতীতে কেউ তোকে কষ্ট দিয়ে থাকতে পারে। তুই একসময় ভুল মানুষকে বিশ্বাস করে একটা সুযোগ দিয়েছিলি, আর তার জন্য কষ্ট পেয়েছিস। আমি তোর সেই কষ্টকে ছোট করতে চাই না, আর নিজেকে অন্য কারও সঙ্গে তুলনাও করতে চাই না।
+
+শুধু এটুকু বলতে চাই—যদি তোর মন চায়, আমাকেও একবার জানার সুযোগ দিস। আমি নিখুঁত মানুষ নই, কিন্তু তোকে সম্মান দিয়ে, সৎ থেকে আর বিশ্বাসের মূল্য বুঝে সম্পর্কটা গড়ে তুলতে চাই।
+
+তোর উত্তর YES হোক বা NO, আমি তোকে জোর করব না। তোর অনুভূতি আর সিদ্ধান্তকে সম্মান করব।
+
+আমি শুধু আমার মনের কথাটা তোকে জানাতে চেয়েছিলাম। 💗
+
+তুই কি আমাকে একবার সুযোগ দিতে চাইবি?
+      </div>
+
+      <div class="button-area" id="buttonArea">
+        <button id="yesBtn">YES 💖</button>
+        <button id="noBtn">NO 🌷</button>
+      </div>
+
+      <p class="hint" id="hint">
+        NO বাটনটি প্রথম ৩ বার জায়গা বদলাবে। 😊
+      </p>
+    </section>
+
+    <!-- NO REASON SCREEN -->
+    <section id="reasonScreen" class="hidden">
+      <div style="font-size:42px">🌷</div>
+      <h1>তোর কথা শুনতে চাই</h1>
+
+      <p>
+        তুই NO বলেছিস—আমি তোর সিদ্ধান্তকে সম্মান করি।
+        যদি স্বচ্ছন্দ বোধ করিস, কেন এমন মনে হলো,
+        সেটা আমাকে লিখে জানাতে পারিস।
+      </p>
+
+      <p class="small">
+        কারণ লেখা বাধ্যতামূলক নয়। তুই চাইলে ফাঁকাও রাখতে পারিস।
+      </p>
+
+      <textarea
+        id="reasonInput"
+        maxlength="1000"
+        placeholder="তুই চাইলে এখানে তোর কথা লিখতে পারিস..."
+      ></textarea>
+
+      <button class="primary" id="submitReasonBtn">
+        Submit 💌
+      </button>
+
+      <p class="small">
+        এই পেজে লেখা থাকবে; নিজে থেকে কোথাও পাঠানো হবে না।
+      </p>
+    </section>
+
+    <!-- RESULT SCREEN -->
+    <section id="resultScreen" class="hidden">
+      <div class="result-emoji" id="resultEmoji">💗</div>
+      <h1 id="resultTitle">Thank You</h1>
+      <p id="resultMessage"></p>
+
+      <button class="primary" id="backBtn">
+        Back to Start 💌
+      </button>
+    </section>
+
+    <p class="small" style="margin-bottom:0">
+      Made with care 💗
+    </p>
+
+  </main>
+
+  <script>
+    const homeScreen = document.getElementById("homeScreen");
+    const proposalScreen = document.getElementById("proposalScreen");
+    const reasonScreen = document.getElementById("reasonScreen");
+    const resultScreen = document.getElementById("resultScreen");
+
+    const buttonArea = document.getElementById("buttonArea");
+    const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+    const hint = document.getElementById("hint");
+
+    let noMoves = 0;
+
+    function showScreen(screen) {
+      homeScreen.classList.add("hidden");
+      proposalScreen.classList.add("hidden");
+      reasonScreen.classList.add("hidden");
+      resultScreen.classList.add("hidden");
+
+      screen.classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    document.getElementById("openBtn").addEventListener("click", () => {
+      showScreen(proposalScreen);
+    });
+
+    // NO button moves exactly three times on its first three clicks.
+    // The fourth click opens the NO response screen.
+    noBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      if (noMoves < 3) {
+        noMoves++;
+
+        const areaWidth = buttonArea.clientWidth;
+        const areaHeight = buttonArea.clientHeight;
+        const btnWidth = noBtn.offsetWidth;
+        const btnHeight = noBtn.offsetHeight;
+
+        const maxLeft = Math.max(0, areaWidth - btnWidth);
+        const maxTop = Math.max(0, areaHeight - btnHeight);
+
+        let newLeft;
+        let newTop;
+
+        // Try to choose a position noticeably different from the last one.
+        do {
+          newLeft = Math.random() * maxLeft;
+          newTop = Math.random() * maxTop;
+        } while (
+          Math.abs(newLeft - noBtn.offsetLeft) < 25 &&
+          Math.abs(newTop - noBtn.offsetTop) < 20
+        );
+
+        noBtn.style.left = newLeft + "px";
+        noBtn.style.top = newTop + "px";
+
+        hint.textContent =
+          "NO বাটন জায়গা বদলেছে: " + noMoves + "/3 💗";
+
+        if (noMoves === 3) {
+          hint.textContent =
+            "এবার NO-তে ক্লিক করলে তোর উত্তর দেওয়া যাবে। 🌷";
+        }
+      } else {
+        showScreen(reasonScreen);
+      }
+    });
+
+    yesBtn.addEventListener("click", () => {
+      document.getElementById("resultEmoji").textContent = "💖";
+      document.getElementById("resultTitle").textContent = "Thank You, Snigdha!";
+      document.getElementById("resultMessage").textContent =
+        "তোর উত্তর দেওয়ার জন্য ধন্যবাদ। আমি আশা করি আমরা একে অপরকে আরও ভালোভাবে জানার সুযোগ পাব। তোর অনুভূতি আর সিদ্ধান্ত আমার কাছে গুরুত্বপূর্ণ। 💗";
+
+      showScreen(resultScreen);
+    });
+
+    document.getElementById("submitReasonBtn").addEventListener("click", () => {
+      const reason = document.getElementById("reasonInput").value.trim();
+
+      document.getElementById("resultEmoji").textContent = "🌷";
+      document.getElementById("resultTitle").textContent = "তোর কথা বুঝলাম";
+      document.getElementById("resultMessage").textContent = reason
+        ? "তুই লিখেছিস:\n\n" + reason +
+          "\n\nতোর কথা জানানোর জন্য ধন্যবাদ। আমি তোর সিদ্ধান্তকে সম্মান করি।"
+        : "তুই নিজের সিদ্ধান্ত জানিয়েছিস—তার জন্য ধন্যবাদ। তোর সিদ্ধান্তকে আমি সম্মান করি।";
+
+      showScreen(resultScreen);
+    });
+
+    document.getElementById("backBtn").addEventListener("click", () => {
+      noMoves = 0;
+      noBtn.style.left = "";
+      noBtn.style.top = "";
+
+      document.getElementById("reasonInput").value = "";
+
+      hint.textContent =
+        "NO বাটনটি প্রথম ৩ বার জায়গা বদলাবে। 😊";
+
+      showScreen(homeScreen);
+    });
+
+    // Floating hearts decoration
+    function createHeart() {
+      const heart = document.createElement("span");
+      heart.className = "floating-heart";
+      heart.textContent = ["💗", "💕", "🌸", "💖"][
+        Math.floor(Math.random() * 4)
+      ];
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (15 + Math.random() * 15) + "px";
+      heart.style.animationDuration = (5 + Math.random() * 4) + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 9500);
+    }
+
+    setInterval(createHeart, 900);
+  </script>
+
+</body>
+</html>
